@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<div class=" d-flex justify-content-center bg-dark h-100">
+  {% with messages = get_flashed_messages(with_categories = true)%}
+    {% if messages %}
+      {% for category,message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+<div class="w-100 justify-content-center " style="margin-top: 8rem;margin-left: 10rem;">
+
+  <form class="" action="" method="post">
+    {{ form.hidden_tag() }}
+    <div class="card text-white bg-dark mb-3" style="max-width: 40rem;">
+      <div class="card-header">{{legend}}</div>
+
+      <div class="card-body">
+
+        {{ form.title.label }}<br>
+        {% if form.title.errors %}
+              {{ form.title }}
+              {% for errors in form.title.errors  %}
+                <span>{{ error }}</span>
+              {% endfor %}
+        {% endif %}
+        {{ form.title(class='bg-dark border text-white rounded w-50') }}
+      </div>
+      <div class="card-body">
+          {{ form.content.label }}<br>
+          {% if form.content.errors %}
+                {{ form.content }}
+                {% for errors in form.content.errors  %}
+                  <span>{{ error }}</span>
+                {% endfor %}
+          {% endif %}
+          {{ form.content(class='bg-dark border text-white rounded w-50') }}
+      </div>
+      <div class="d-flex justify-content-center">
+
+      {{ form.submit(class='btn btn-primary w-50')}}
+    </div>
+    </div>
+
+
+  </form>
+</div>
+
+
+</div>
+{% endblock content %}

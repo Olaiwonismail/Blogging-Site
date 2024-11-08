@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="w-100 justify-content-center bg-dark">
+  <div class="card  text-white bg-dark mb-3">
+    <div class="card-body">
+      <h1 class="text-white text-center ">Profile</h1>
+
+    </div>
+  </div>
+
+<div class="w-100 d-flex justify-content-center bg-dark">
+
+<div class="card bg-dark text-white mb-3 w-50">
+
+  <img  class="card-img-top rounded-circle me-2" src="{{ image_file }}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ current_user.username }}</h5>
+    <p class="card-text">{{ current_user.email }}</p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <form class="" action="" method="post" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+      {% with messages = get_flashed_messages(with_categories = true)%}
+        {% if messages %}
+          {% for category,message in messages %}
+          <p>{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <fieldset class="">
+        <legend>Account Info</legend>
+
+        <div class="m-3">
+
+
+            {{ form.username.label }}<br>
+            {% if form.username.errors %}
+                  <!-- {{ form.username }} -->
+                  {% for error in form.username.errors  %}
+                    <span>{{ error }}</span>
+                  {% endfor %}
+            {% endif %}
+            {{ form.username }}
+        </div>
+
+        <div class="m-3">
+            {{ form.email.label }}<br>
+            {% if form.email.errors %}
+                  <!-- {{ form.email }} -->
+                  {% for error in form.email.errors  %}
+                    <span>{{ error }}</span>
+                  {% endfor %}
+            {% endif %}
+            {{ form.email }}
+        </div>
+
+        <br>
+        {{form.picture.label}}
+        {{form.picture}}
+        {% if form.picture.errors %}
+          {% for error in form.picture.errors  %}
+            <span>{{ error }}</span><br>
+          {% endfor %}
+        {% endif %}
+      </fieldset>
+      <div class="d-flex justify-content-center w-100">
+
+        {{ form.submit(class="btn btn-primary w-50 m-3")}}
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
+</div>
+
+
+
+
+{% endblock content %}

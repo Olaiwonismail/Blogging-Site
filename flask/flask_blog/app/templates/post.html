@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="d-flex w-100 h-100 justify-content-center align-items-center">
+
+
+<div class="card text-white bg-dark w-75">
+<div class="card-header">
+    <img height="25" width="25" src="{{ url_for('static',filename ='profile_pics/'+post.author.image_file )}}" alt="Hi"> {{post.author.username }}
+</div>
+<div class="card-body">
+  <h5 class="card-title">{{ post.title}}</h5>
+  <p class="card-text">{{ post.content}} </p>
+  <p class="card-subtitle"> {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+
+</div>
+{% if post.author == current_user %}
+<div class="card-footer text-muted">
+
+  <a href="{{url_for('posts.update_post',post_id=post.id)}}" class="btn btn-primary mr-3">Edit </a><span>  .   .</span> <a class="btn btn-danger" href="{{url_for('posts.delete',post_id=post.id)}}">Delete</a>
+
+</div>
+{% endif %}
+</div>
+</div>
+
+
+
+
+{% endblock content %}

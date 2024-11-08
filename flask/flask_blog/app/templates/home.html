@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+{% with messages = get_flashed_messages(with_categories = true)%}
+  {% if messages %}
+    {% for category,message in messages %}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<div class="justify-content-center bg-dark " >
+  <div class="card  text-white bg-dark mb-3">
+  <div class="card-body">
+    <h1 class="text-white text-center ">Posts</h1>
+
+  </div>
+</div>
+  {% for post in posts.items %}
+  <div class="d-flex  justify-content-center w-100">
+
+    <div class="card text-white bg-dark mb-md-5 w-50 ">
+      <div class="card-header">
+        <img class="" style="
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+        "   src="{{ url_for('static',filename ='profile_pics/'+post.author.image_file )}}" alt="Hi">
+        <a href="{{ url_for('posts.post',post_id=post.id)}}">{{ post.title}}</a>
+      </div>
+      <div class="card-body">
+        <span class="card-title h5"> {{ post.content}} </span>
+        <br>
+
+<hr>
+        <a href="{{ url_for('users.user_posts',username = post.author.username)}}">{{post.author.username }}</a>
+      </div>
+    </div>
+  </div>
+    {% endfor %}
+    {% for page_num in posts.iter_pages(left_edge=1,right_edge=1,left_current=1,right_current=1) %}
+      {% if page_num %}
+        {% if posts.page == page_num%}
+          <a class="btn btn-info mb-4 " href="{{ url_for('main.home',page=page_num)}}">{{page_num}} </a>
+        {% else %}
+          <a class="btn btn-outline-info mb-4 " href="{{ url_for('main.home',page=page_num)}}">{{page_num}} </a>
+
+        {% endif %}
+      {% else %}
+        <span class="text-white">...</span>
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+
+{% endblock content %}

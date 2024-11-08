@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+  <div class="">
+
+    <div class="container">
+      {% with messages = get_flashed_messages(with_categories = true)%}
+      {% if messages %}
+      {% for category,message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+
+      <div class="login form">
+        <header>Login</header>
+        <form action="{{ url_for('users.login')}}" method="post">
+            {{ form.hidden_tag() }}
+          {% if form.email.errors %}
+
+                {{ form.email }}
+                {% for errors in form.email.errors  %}
+                  <span>{{ error }}</span>
+                {% endfor %}
+          {% endif %}
+          {{ form.email(placeholder='Email') }}
+
+          {% if form.password.errors %}
+          {{ form.password }}
+          {% for errors in form.password.errors  %}
+          <span>{{ error }}</span>
+          {% endfor %}
+          {% endif %}
+          {{ form.password(placeholder='Password') }}
+          <a href="{{ url_for('users.reset_request') }}">Forgot password?</a>
+          {{ form.submit(class = 'button') }}
+        </form>
+        <div class="signup">
+          <span class="signup">Don't have an account?
+           <a href="{{url_for('users.registration')}}"> Sign Up </a>
+          </span>
+        </div>
+      </div>
+      </div>
+      {% endblock content %} 
