@@ -6,7 +6,7 @@ A **simple blogging application** built with **Flask, HTML, and CSS**. Users can
 - **User Authentication** – Register, login, and logout functionality.
 - **Create & Manage Posts** – Users can add, edit, and delete blog posts.
 - **Database Support** – Uses PostgreSQL for database management.
-- **Responsive UI** – Styled with HTML & CSS.
+-  Styled with HTML & CSS.
 
 ## 🛠 Tech Stack
 - **Backend:** Flask, SQLAlchemy
