@@ -27,7 +27,7 @@ class User(db.Model,UserMixin):
         try:
             user_id = s.loads(token)['user_id']
         except:
-            return none
+            return None
         return User.query.get(user_id)
 
     def __repr__(self):

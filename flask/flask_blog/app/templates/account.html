@@ -1,79 +1,95 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="w-100 justify-content-center bg-dark">
-  <div class="card  text-white bg-dark mb-3">
+<div class="container py-4">
+  <div class="card shadow-sm mb-4">
     <div class="card-body">
-      <h1 class="text-white text-center ">Profile</h1>
-
+      <h1 class="text-center mb-0">Profile</h1>
     </div>
   </div>
 
-<div class="w-100 d-flex justify-content-center bg-dark">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <img class="rounded-circle mb-3" src="{{ image_file }}" alt="Profile picture" 
+                 style="width: 150px; height: 150px; object-fit: cover; border: 3px solid #f8f9fa;">
+            <h3 class="mb-1">{{ current_user.username }}</h3>
+            <p class="text-muted">{{ current_user.email }}</p>
+          </div>
 
-<div class="card bg-dark text-white mb-3 w-50">
-
-  <img  class="card-img-top rounded-circle me-2" src="{{ image_file }}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{ current_user.username }}</h5>
-    <p class="card-text">{{ current_user.email }}</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    <form class="" action="" method="post" enctype="multipart/form-data">
-      {{ form.hidden_tag() }}
-      {% with messages = get_flashed_messages(with_categories = true)%}
-        {% if messages %}
-          {% for category,message in messages %}
-          <p>{{ message }}</p>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
-      <fieldset class="">
-        <legend>Account Info</legend>
-
-        <div class="m-3">
-
-
-            {{ form.username.label }}<br>
-            {% if form.username.errors %}
-                  <!-- {{ form.username }} -->
-                  {% for error in form.username.errors  %}
-                    <span>{{ error }}</span>
-                  {% endfor %}
+          {% with messages = get_flashed_messages(with_categories = true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category if category else 'success' }} alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              {% endfor %}
             {% endif %}
-            {{ form.username }}
+          {% endwith %}
+
+          <form method="post" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            
+            <div class="card mb-4">
+              <div class="card-header bg-light">
+                <h5 class="mb-0">Account Information</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  {{ form.username.label(class="form-label") }}
+                  {% if form.username.errors %}
+                    {{ form.username(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                      {% for error in form.username.errors %}
+                        {{ error }}
+                      {% endfor %}
+                    </div>
+                  {% else %}
+                    {{ form.username(class="form-control") }}
+                  {% endif %}
+                </div>
+                
+                <div class="mb-3">
+                  {{ form.email.label(class="form-label") }}
+                  {% if form.email.errors %}
+                    {{ form.email(class="form-control is-invalid") }}
+                    <div class="invalid-feedback">
+                      {% for error in form.email.errors %}
+                        {{ error }}
+                      {% endfor %}
+                    </div>
+                  {% else %}
+                    {{ form.email(class="form-control") }}
+                  {% endif %}
+                </div>
+                
+                <div class="mb-3">
+                  {{ form.picture.label(class="form-label d-block") }}
+                  <div class="input-group">
+                    {{ form.picture(class="form-control" + (" is-invalid" if form.picture.errors else "")) }}
+                    {% if form.picture.errors %}
+                      <div class="invalid-feedback">
+                        {% for error in form.picture.errors %}
+                          {{ error }}
+                        {% endfor %}
+                      </div>
+                    {% endif %}
+                  </div>
+                  <small class="text-muted">Upload a square image for best results</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              {{ form.submit(class="btn btn-primary px-4") }}
+            </div>
+          </form>
         </div>
-
-        <div class="m-3">
-            {{ form.email.label }}<br>
-            {% if form.email.errors %}
-                  <!-- {{ form.email }} -->
-                  {% for error in form.email.errors  %}
-                    <span>{{ error }}</span>
-                  {% endfor %}
-            {% endif %}
-            {{ form.email }}
-        </div>
-
-        <br>
-        {{form.picture.label}}
-        {{form.picture}}
-        {% if form.picture.errors %}
-          {% for error in form.picture.errors  %}
-            <span>{{ error }}</span><br>
-          {% endfor %}
-        {% endif %}
-      </fieldset>
-      <div class="d-flex justify-content-center w-100">
-
-        {{ form.submit(class="btn btn-primary w-50 m-3")}}
       </div>
-    </form>
-  </div>
+    </div>
   </div>
 </div>
-</div>
-
-
-
-
 {% endblock content %}

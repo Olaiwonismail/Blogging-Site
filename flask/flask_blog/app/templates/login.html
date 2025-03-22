@@ -1,50 +1,69 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-
-
-
-  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
-  <div class="">
-
-    <div class="container">
-      {% with messages = get_flashed_messages(with_categories = true)%}
-      {% if messages %}
-      {% for category,message in messages %}
-      <p>{{ message }}</p>
-      {% endfor %}
-      {% endif %}
-      {% endwith %}
-
-      <div class="login form">
-        <header>Login</header>
-        <form action="{{ url_for('users.login')}}" method="post">
-            {{ form.hidden_tag() }}
-          {% if form.email.errors %}
-
-                {{ form.email }}
-                {% for errors in form.email.errors  %}
-                  <span>{{ error }}</span>
-                {% endfor %}
-          {% endif %}
-          {{ form.email(placeholder='Email') }}
-
-          {% if form.password.errors %}
-          {{ form.password }}
-          {% for errors in form.password.errors  %}
-          <span>{{ error }}</span>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category if category else 'info' }} alert-dismissible fade show mb-4" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
           {% endfor %}
-          {% endif %}
-          {{ form.password(placeholder='Password') }}
-          <a href="{{ url_for('users.reset_request') }}">Forgot password?</a>
-          {{ form.submit(class = 'button') }}
-        </form>
-        <div class="signup">
-          <span class="signup">Don't have an account?
-           <a href="{{url_for('users.registration')}}"> Sign Up </a>
-          </span>
+        {% endif %}
+      {% endwith %}
+      
+      <div class="card shadow-sm border-0">
+        <div class="card-body p-4 p-md-5">
+          <h2 class="card-title text-center mb-4">Login</h2>
+          
+          <form action="{{ url_for('users.login') }}" method="post">
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+              {% if form.email.errors %}
+                {{ form.email(class="form-control is-invalid", placeholder="Email") }}
+                <div class="invalid-feedback">
+                  {% for error in form.email.errors %}
+                    {{ error }}
+                  {% endfor %}
+                </div>
+              {% else %}
+                {{ form.email(class="form-control", placeholder="Email") }}
+              {% endif %}
+            </div>
+            
+            <div class="mb-3">
+              {% if form.password.errors %}
+                {{ form.password(class="form-control is-invalid", placeholder="Password") }}
+                <div class="invalid-feedback">
+                  {% for error in form.password.errors %}
+                    {{ error }}
+                  {% endfor %}
+                </div>
+              {% else %}
+                {{ form.password(class="form-control", placeholder="Password") }}
+              {% endif %}
+            </div>
+            
+            <div class="d-flex justify-content-end mb-4">
+              <a href="{{ url_for('users.reset_request') }}" class="text-decoration-none small">Forgot password?</a>
+            </div>
+            
+            <div class="d-grid">
+              {{ form.submit(class="btn btn-primary py-2") }}
+            </div>
+            
+            <div class="text-center mt-4">
+              <span class="text-muted">Don't have an account?</span>
+              <a href="{{ url_for('users.registration') }}" class="text-decoration-none ms-1">Sign Up</a>
+            </div>
+          </form>
         </div>
       </div>
-      </div>
-      {% endblock content %} 
+    </div>
+  </div>
+</div>
+{% endblock content %}

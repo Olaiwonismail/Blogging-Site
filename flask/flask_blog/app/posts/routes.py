@@ -24,7 +24,7 @@ def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html',title = post.title,post = post)
 
-@posts.route("/post/<int:post_id>/update",methods = ['POST','GET'])
+@posts.route("/post/<int:post_id>/update",methods = ['POST','GET','PUT'])
 @login_required
 def update_post(post_id):
     post = Post.query.get_or_404(post_id)
@@ -44,7 +44,7 @@ def update_post(post_id):
 
     return render_template('create_post.html',title='Update Post',form=form,legend = 'Update Post')
 
-@posts.route("/post/<int:post_id>/delete",methods = ['POST','GET'])
+@posts.route("/post/<int:post_id>/delete",methods = ['POST','GET','DELETE'])
 @login_required
 def delete(post_id):
     post = Post.query.get_or_404(post_id)

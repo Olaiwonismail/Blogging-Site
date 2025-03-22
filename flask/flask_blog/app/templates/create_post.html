@@ -1,52 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
-<div class=" d-flex justify-content-center bg-dark h-100">
-  {% with messages = get_flashed_messages(with_categories = true)%}
+<div class="container py-4">
+  {% with messages = get_flashed_messages(with_categories = true) %}
     {% if messages %}
-      {% for category,message in messages %}
-      <p>{{ message }}</p>
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
       {% endfor %}
     {% endif %}
   {% endwith %}
 
-<div class="w-100 justify-content-center " style="margin-top: 8rem;margin-left: 10rem;">
-
-  <form class="" action="" method="post">
-    {{ form.hidden_tag() }}
-    <div class="card text-white bg-dark mb-3" style="max-width: 40rem;">
-      <div class="card-header">{{legend}}</div>
-
-      <div class="card-body">
-
-        {{ form.title.label }}<br>
-        {% if form.title.errors %}
-              {{ form.title }}
-              {% for errors in form.title.errors  %}
-                <span>{{ error }}</span>
-              {% endfor %}
-        {% endif %}
-        {{ form.title(class='bg-dark border text-white rounded w-50') }}
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white">
+          <h4 class="mb-0">{{ legend }}</h4>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+              {{ form.title.label(class="form-label") }}
+              {% if form.title.errors %}
+                {{ form.title(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                  {% for error in form.title.errors %}
+                    {{ error }}
+                  {% endfor %}
+                </div>
+              {% else %}
+                {{ form.title(class="form-control") }}
+              {% endif %}
+            </div>
+            
+            <div class="mb-3">
+              {{ form.content.label(class="form-label") }}
+              {% if form.content.errors %}
+                {{ form.content(class="form-control is-invalid", rows=6) }}
+                <div class="invalid-feedback">
+                  {% for error in form.content.errors %}
+                    {{ error }}
+                  {% endfor %}
+                </div>
+              {% else %}
+                {{ form.content(class="form-control", rows=6) }}
+              {% endif %}
+            </div>
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              {{ form.submit(class="btn btn-primary px-4") }}
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="card-body">
-          {{ form.content.label }}<br>
-          {% if form.content.errors %}
-                {{ form.content }}
-                {% for errors in form.content.errors  %}
-                  <span>{{ error }}</span>
-                {% endfor %}
-          {% endif %}
-          {{ form.content(class='bg-dark border text-white rounded w-50') }}
-      </div>
-      <div class="d-flex justify-content-center">
-
-      {{ form.submit(class='btn btn-primary w-50')}}
     </div>
-    </div>
-
-
-  </form>
-</div>
-
-
+  </div>
 </div>
 {% endblock content %}

@@ -1,0 +1,376 @@
+{
+    "users": [
+        {
+            "username": "user1",
+            "email": "user1@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user2",
+            "email": "user2@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user3",
+            "email": "user3@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user4",
+            "email": "user4@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user5",
+            "email": "user5@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user6",
+            "email": "user6@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user7",
+            "email": "user7@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user8",
+            "email": "user8@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user9",
+            "email": "user9@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user10",
+            "email": "user10@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user11",
+            "email": "user11@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user12",
+            "email": "user12@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user13",
+            "email": "user13@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user14",
+            "email": "user14@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user15",
+            "email": "user15@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user16",
+            "email": "user16@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user17",
+            "email": "user17@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user18",
+            "email": "user18@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user19",
+            "email": "user19@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        },
+        {
+            "username": "user20",
+            "email": "user20@example.com",
+            "image_file": "default.jpg",
+            "password": "hashedpassword"
+        }
+    ],
+    "posts": [
+        {
+            "title": "Post 1 - Technology is evolvi...",
+            "content": "Technology is evolving at an incredible pace!",
+            "user_id": 2
+        },
+        {
+            "title": "Post 2 - Learning Python has ...",
+            "content": "Learning Python has been a fantastic journey.",
+            "user_id": 3
+        },
+        {
+            "title": "Post 3 - The best way to pred...",
+            "content": "The best way to predict the future is to create it.",
+            "user_id": 4
+        },
+        {
+            "title": "Post 4 - Today's workout was ...",
+            "content": "Today's workout was intense but worth it!",
+            "user_id": 5
+        },
+        {
+            "title": "Post 5 - A good book and a cu...",
+            "content": "A good book and a cup of coffee make my day.",
+            "user_id": 6
+        },
+        {
+            "title": "Post 6 - The importance of me...",
+            "content": "The importance of mental health cannot be overstated.",
+            "user_id": 7
+        },
+        {
+            "title": "Post 7 - Just watched an amaz...",
+            "content": "Just watched an amazing documentary on space exploration.",
+            "user_id": 8
+        },
+        {
+            "title": "Post 8 - Cooking is an art th...",
+            "content": "Cooking is an art that I enjoy experimenting with.",
+            "user_id": 9
+        },
+        {
+            "title": "Post 9 - Productivity tips th...",
+            "content": "Productivity tips that actually work!",
+            "user_id": 10
+        },
+        {
+            "title": "Post 10 - AI and its impact on...",
+            "content": "AI and its impact on the job market.",
+            "user_id": 11
+        },
+        {
+            "title": "Post 11 - The benefits of a mi...",
+            "content": "The benefits of a minimalist lifestyle.",
+            "user_id": 12
+        },
+        {
+            "title": "Post 12 - Traveling is the bes...",
+            "content": "Traveling is the best way to learn about the world.",
+            "user_id": 13
+        },
+        {
+            "title": "Post 13 - Why coding should be...",
+            "content": "Why coding should be taught in schools.",
+            "user_id": 14
+        },
+        {
+            "title": "Post 14 - A day in the life of...",
+            "content": "A day in the life of a software engineer.",
+            "user_id": 15
+        },
+        {
+            "title": "Post 15 - Gaming is more than ...",
+            "content": "Gaming is more than just entertainment.",
+            "user_id": 16
+        },
+        {
+            "title": "Post 16 - How to stay motivate...",
+            "content": "How to stay motivated when working remotely.",
+            "user_id": 17
+        },
+        {
+            "title": "Post 17 - Fitness and well-bei...",
+            "content": "Fitness and well-being go hand in hand.",
+            "user_id": 18
+        },
+        {
+            "title": "Post 18 - Understanding blockc...",
+            "content": "Understanding blockchain technology.",
+            "user_id": 19
+        },
+        {
+            "title": "Post 19 - Music is the univers...",
+            "content": "Music is the universal language of humanity.",
+            "user_id": 20
+        },
+        {
+            "title": "Post 20 - Exploring the beauty...",
+            "content": "Exploring the beauty of nature in the mountains.",
+            "user_id": 1
+        },
+        {
+            "title": "Post 21 - Technology is evolvi...",
+            "content": "Technology is evolving at an incredible pace!",
+            "user_id": 2
+        },
+        {
+            "title": "Post 22 - Learning Python has ...",
+            "content": "Learning Python has been a fantastic journey.",
+            "user_id": 3
+        },
+        {
+            "title": "Post 23 - The best way to pred...",
+            "content": "The best way to predict the future is to create it.",
+            "user_id": 4
+        },
+        {
+            "title": "Post 24 - Today's workout was ...",
+            "content": "Today's workout was intense but worth it!",
+            "user_id": 5
+        },
+        {
+            "title": "Post 25 - A good book and a cu...",
+            "content": "A good book and a cup of coffee make my day.",
+            "user_id": 6
+        },
+        {
+            "title": "Post 26 - The importance of me...",
+            "content": "The importance of mental health cannot be overstated.",
+            "user_id": 7
+        },
+        {
+            "title": "Post 27 - Just watched an amaz...",
+            "content": "Just watched an amazing documentary on space exploration.",
+            "user_id": 8
+        },
+        {
+            "title": "Post 28 - Cooking is an art th...",
+            "content": "Cooking is an art that I enjoy experimenting with.",
+            "user_id": 9
+        },
+        {
+            "title": "Post 29 - Productivity tips th...",
+            "content": "Productivity tips that actually work!",
+            "user_id": 10
+        },
+        {
+            "title": "Post 30 - AI and its impact on...",
+            "content": "AI and its impact on the job market.",
+            "user_id": 11
+        },
+        {
+            "title": "Post 31 - The benefits of a mi...",
+            "content": "The benefits of a minimalist lifestyle.",
+            "user_id": 12
+        },
+        {
+            "title": "Post 32 - Traveling is the bes...",
+            "content": "Traveling is the best way to learn about the world.",
+            "user_id": 13
+        },
+        {
+            "title": "Post 33 - Why coding should be...",
+            "content": "Why coding should be taught in schools.",
+            "user_id": 14
+        },
+        {
+            "title": "Post 34 - A day in the life of...",
+            "content": "A day in the life of a software engineer.",
+            "user_id": 15
+        },
+        {
+            "title": "Post 35 - Gaming is more than ...",
+            "content": "Gaming is more than just entertainment.",
+            "user_id": 16
+        },
+        {
+            "title": "Post 36 - How to stay motivate...",
+            "content": "How to stay motivated when working remotely.",
+            "user_id": 17
+        },
+        {
+            "title": "Post 37 - Fitness and well-bei...",
+            "content": "Fitness and well-being go hand in hand.",
+            "user_id": 18
+        },
+        {
+            "title": "Post 38 - Understanding blockc...",
+            "content": "Understanding blockchain technology.",
+            "user_id": 19
+        },
+        {
+            "title": "Post 39 - Music is the univers...",
+            "content": "Music is the universal language of humanity.",
+            "user_id": 20
+        },
+        {
+            "title": "Post 40 - Exploring the beauty...",
+            "content": "Exploring the beauty of nature in the mountains.",
+            "user_id": 1
+        },
+        {
+            "title": "Post 41 - Technology is evolvi...",
+            "content": "Technology is evolving at an incredible pace!",
+            "user_id": 2
+        },
+        {
+            "title": "Post 42 - Learning Python has ...",
+            "content": "Learning Python has been a fantastic journey.",
+            "user_id": 3
+        },
+        {
+            "title": "Post 43 - The best way to pred...",
+            "content": "The best way to predict the future is to create it.",
+            "user_id": 4
+        },
+        {
+            "title": "Post 44 - Today's workout was ...",
+            "content": "Today's workout was intense but worth it!",
+            "user_id": 5
+        },
+        {
+            "title": "Post 45 - A good book and a cu...",
+            "content": "A good book and a cup of coffee make my day.",
+            "user_id": 6
+        },
+        {
+            "title": "Post 46 - The importance of me...",
+            "content": "The importance of mental health cannot be overstated.",
+            "user_id": 7
+        },
+        {
+            "title": "Post 47 - Just watched an amaz...",
+            "content": "Just watched an amazing documentary on space exploration.",
+            "user_id": 8
+        },
+        {
+            "title": "Post 48 - Cooking is an art th...",
+            "content": "Cooking is an art that I enjoy experimenting with.",
+            "user_id": 9
+        },
+        {
+            "title": "Post 49 - Productivity tips th...",
+            "content": "Productivity tips that actually work!",
+            "user_id": 10
+        },
+        {
+            "title": "Post 50 - AI and its impact on...",
+            "content": "AI and its impact on the job market.",
+            "user_id": 11
+        }
+    ]
+}
