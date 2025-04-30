@@ -1,0 +1,568 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "email": "user1@example.com",
+      "image_file": "user1.png",
+      "password": "hashed_pw1"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "email": "user2@example.com",
+      "image_file": "user2.png",
+      "password": "hashed_pw2"
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "email": "user3@example.com",
+      "image_file": "user3.png",
+      "password": "hashed_pw3"
+    },
+    {
+      "id": 4,
+      "username": "user4",
+      "email": "user4@example.com",
+      "image_file": "user4.png",
+      "password": "hashed_pw4"
+    },
+    {
+      "id": 5,
+      "username": "user5",
+      "email": "user5@example.com",
+      "image_file": "user5.png",
+      "password": "hashed_pw5"
+    },
+    {
+      "id": 6,
+      "username": "user6",
+      "email": "user6@example.com",
+      "image_file": "user6.png",
+      "password": "hashed_pw6"
+    },
+    {
+      "id": 7,
+      "username": "user7",
+      "email": "user7@example.com",
+      "image_file": "user7.png",
+      "password": "hashed_pw7"
+    },
+    {
+      "id": 8,
+      "username": "user8",
+      "email": "user8@example.com",
+      "image_file": "user8.png",
+      "password": "hashed_pw8"
+    },
+    {
+      "id": 9,
+      "username": "user9",
+      "email": "user9@example.com",
+      "image_file": "user9.png",
+      "password": "hashed_pw9"
+    },
+    {
+      "id": 10,
+      "username": "user10",
+      "email": "user10@example.com",
+      "image_file": "user10.png",
+      "password": "hashed_pw10"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Sample Post 1",
+      "date_posted": "2025-04-13T17:08:59Z",
+      "content": "This is the content for sample post 1. It has more dummy text to simulate a real post.",
+      "user_id": 6
+    },
+    {
+      "id": 2,
+      "title": "Sample Post 2",
+      "date_posted": "2025-04-13T17:08:59Z",
+      "content": "This is the content for sample post 2. It has more dummy text to simulate a real post.",
+      "user_id": 3
+    },
+    {
+      "id": 3,
+      "title": "Sample Post 3",
+      "date_posted": "2025-03-09T17:08:59Z",
+      "content": "This is the content for sample post 3. It has more dummy text to simulate a real post.",
+      "user_id": 10
+    },
+    {
+      "id": 4,
+      "title": "Sample Post 4",
+      "date_posted": "2025-03-20T17:08:59Z",
+      "content": "This is the content for sample post 4. It has more dummy text to simulate a real post.",
+      "user_id": 6
+    },
+    {
+      "id": 5,
+      "title": "Sample Post 5",
+      "date_posted": "2025-03-10T17:08:59Z",
+      "content": "This is the content for sample post 5. It has more dummy text to simulate a real post.",
+      "user_id": 3
+    },
+    {
+      "id": 6,
+      "title": "Sample Post 6",
+      "date_posted": "2025-03-09T17:08:59Z",
+      "content": "This is the content for sample post 6. It has more dummy text to simulate a real post.",
+      "user_id": 7
+    },
+    {
+      "id": 7,
+      "title": "Sample Post 7",
+      "date_posted": "2025-04-23T17:08:59Z",
+      "content": "This is the content for sample post 7. It has more dummy text to simulate a real post.",
+      "user_id": 5
+    },
+    {
+      "id": 8,
+      "title": "Sample Post 8",
+      "date_posted": "2025-04-26T17:08:59Z",
+      "content": "This is the content for sample post 8. It has more dummy text to simulate a real post.",
+      "user_id": 10
+    },
+    {
+      "id": 9,
+      "title": "Sample Post 9",
+      "date_posted": "2025-04-30T17:08:59Z",
+      "content": "This is the content for sample post 9. It has more dummy text to simulate a real post.",
+      "user_id": 8
+    },
+    {
+      "id": 10,
+      "title": "Sample Post 10",
+      "date_posted": "2025-03-17T17:08:59Z",
+      "content": "This is the content for sample post 10. It has more dummy text to simulate a real post.",
+      "user_id": 9
+    },
+    {
+      "id": 11,
+      "title": "Sample Post 11",
+      "date_posted": "2025-03-11T17:08:59Z",
+      "content": "This is the content for sample post 11. It has more dummy text to simulate a real post.",
+      "user_id": 6
+    },
+    {
+      "id": 12,
+      "title": "Sample Post 12",
+      "date_posted": "2025-04-15T17:08:59Z",
+      "content": "This is the content for sample post 12. It has more dummy text to simulate a real post.",
+      "user_id": 1
+    },
+    {
+      "id": 13,
+      "title": "Sample Post 13",
+      "date_posted": "2025-04-06T17:08:59Z",
+      "content": "This is the content for sample post 13. It has more dummy text to simulate a real post.",
+      "user_id": 3
+    },
+    {
+      "id": 14,
+      "title": "Sample Post 14",
+      "date_posted": "2025-04-02T17:08:59Z",
+      "content": "This is the content for sample post 14. It has more dummy text to simulate a real post.",
+      "user_id": 10
+    },
+    {
+      "id": 15,
+      "title": "Sample Post 15",
+      "date_posted": "2025-03-23T17:08:59Z",
+      "content": "This is the content for sample post 15. It has more dummy text to simulate a real post.",
+      "user_id": 6
+    },
+    {
+      "id": 16,
+      "title": "Sample Post 16",
+      "date_posted": "2025-04-08T17:08:59Z",
+      "content": "This is the content for sample post 16. It has more dummy text to simulate a real post.",
+      "user_id": 4
+    },
+    {
+      "id": 17,
+      "title": "Sample Post 17",
+      "date_posted": "2025-03-26T17:08:59Z",
+      "content": "This is the content for sample post 17. It has more dummy text to simulate a real post.",
+      "user_id": 8
+    },
+    {
+      "id": 18,
+      "title": "Sample Post 18",
+      "date_posted": "2025-04-09T17:08:59Z",
+      "content": "This is the content for sample post 18. It has more dummy text to simulate a real post.",
+      "user_id": 2
+    },
+    {
+      "id": 19,
+      "title": "Sample Post 19",
+      "date_posted": "2025-03-23T17:08:59Z",
+      "content": "This is the content for sample post 19. It has more dummy text to simulate a real post.",
+      "user_id": 3
+    },
+    {
+      "id": 20,
+      "title": "Sample Post 20",
+      "date_posted": "2025-04-09T17:08:59Z",
+      "content": "This is the content for sample post 20. It has more dummy text to simulate a real post.",
+      "user_id": 4
+    },
+    {
+      "id": 21,
+      "title": "Sample Post 21",
+      "date_posted": "2025-04-14T17:08:59Z",
+      "content": "This is the content for sample post 21. It has more dummy text to simulate a real post.",
+      "user_id": 6
+    },
+    {
+      "id": 22,
+      "title": "Sample Post 22",
+      "date_posted": "2025-04-20T17:08:59Z",
+      "content": "This is the content for sample post 22. It has more dummy text to simulate a real post.",
+      "user_id": 4
+    },
+    {
+      "id": 23,
+      "title": "Sample Post 23",
+      "date_posted": "2025-04-20T17:08:59Z",
+      "content": "This is the content for sample post 23. It has more dummy text to simulate a real post.",
+      "user_id": 1
+    },
+    {
+      "id": 24,
+      "title": "Sample Post 24",
+      "date_posted": "2025-03-02T17:08:59Z",
+      "content": "This is the content for sample post 24. It has more dummy text to simulate a real post.",
+      "user_id": 6
+    },
+    {
+      "id": 25,
+      "title": "Sample Post 25",
+      "date_posted": "2025-04-08T17:08:59Z",
+      "content": "This is the content for sample post 25. It has more dummy text to simulate a real post.",
+      "user_id": 1
+    },
+    {
+      "id": 26,
+      "title": "Sample Post 26",
+      "date_posted": "2025-04-05T17:08:59Z",
+      "content": "This is the content for sample post 26. It has more dummy text to simulate a real post.",
+      "user_id": 9
+    },
+    {
+      "id": 27,
+      "title": "Sample Post 27",
+      "date_posted": "2025-04-02T17:08:59Z",
+      "content": "This is the content for sample post 27. It has more dummy text to simulate a real post.",
+      "user_id": 9
+    },
+    {
+      "id": 28,
+      "title": "Sample Post 28",
+      "date_posted": "2025-03-01T17:08:59Z",
+      "content": "This is the content for sample post 28. It has more dummy text to simulate a real post.",
+      "user_id": 3
+    },
+    {
+      "id": 29,
+      "title": "Sample Post 29",
+      "date_posted": "2025-04-15T17:08:59Z",
+      "content": "This is the content for sample post 29. It has more dummy text to simulate a real post.",
+      "user_id": 10
+    },
+    {
+      "id": 30,
+      "title": "Sample Post 30",
+      "date_posted": "2025-03-28T17:08:59Z",
+      "content": "This is the content for sample post 30. It has more dummy text to simulate a real post.",
+      "user_id": 2
+    }
+  ],
+  "likes": [
+    {
+      "user_id": 10,
+      "post_id": 27
+    },
+    {
+      "user_id": 3,
+      "post_id": 15
+    },
+    {
+      "user_id": 8,
+      "post_id": 8
+    },
+    {
+      "user_id": 9,
+      "post_id": 8
+    },
+    {
+      "user_id": 7,
+      "post_id": 14
+    },
+    {
+      "user_id": 7,
+      "post_id": 24
+    },
+    {
+      "user_id": 3,
+      "post_id": 4
+    },
+    {
+      "user_id": 4,
+      "post_id": 18
+    },
+    {
+      "user_id": 4,
+      "post_id": 29
+    },
+    {
+      "user_id": 6,
+      "post_id": 14
+    },
+    {
+      "user_id": 1,
+      "post_id": 17
+    },
+    {
+      "user_id": 10,
+      "post_id": 24
+    },
+    {
+      "user_id": 8,
+      "post_id": 17
+    },
+    {
+      "user_id": 7,
+      "post_id": 20
+    },
+    {
+      "user_id": 1,
+      "post_id": 18
+    },
+    {
+      "user_id": 4,
+      "post_id": 24
+    },
+    {
+      "user_id": 6,
+      "post_id": 22
+    },
+    {
+      "user_id": 3,
+      "post_id": 9
+    },
+    {
+      "user_id": 9,
+      "post_id": 13
+    },
+    {
+      "user_id": 3,
+      "post_id": 7
+    },
+    {
+      "user_id": 1,
+      "post_id": 22
+    },
+    {
+      "user_id": 7,
+      "post_id": 15
+    },
+    {
+      "user_id": 10,
+      "post_id": 22
+    },
+    {
+      "user_id": 10,
+      "post_id": 3
+    },
+    {
+      "user_id": 10,
+      "post_id": 13
+    },
+    {
+      "user_id": 1,
+      "post_id": 7
+    },
+    {
+      "user_id": 1,
+      "post_id": 15
+    },
+    {
+      "user_id": 5,
+      "post_id": 28
+    },
+    {
+      "user_id": 7,
+      "post_id": 18
+    },
+    {
+      "user_id": 6,
+      "post_id": 26
+    },
+    {
+      "user_id": 5,
+      "post_id": 9
+    },
+    {
+      "user_id": 1,
+      "post_id": 26
+    },
+    {
+      "user_id": 9,
+      "post_id": 29
+    },
+    {
+      "user_id": 8,
+      "post_id": 13
+    },
+    {
+      "user_id": 2,
+      "post_id": 23
+    },
+    {
+      "user_id": 7,
+      "post_id": 13
+    },
+    {
+      "user_id": 4,
+      "post_id": 2
+    },
+    {
+      "user_id": 2,
+      "post_id": 30
+    },
+    {
+      "user_id": 4,
+      "post_id": 6
+    },
+    {
+      "user_id": 6,
+      "post_id": 30
+    },
+    {
+      "user_id": 8,
+      "post_id": 19
+    },
+    {
+      "user_id": 1,
+      "post_id": 9
+    },
+    {
+      "user_id": 4,
+      "post_id": 3
+    },
+    {
+      "user_id": 8,
+      "post_id": 22
+    },
+    {
+      "user_id": 7,
+      "post_id": 16
+    },
+    {
+      "user_id": 3,
+      "post_id": 17
+    },
+    {
+      "user_id": 3,
+      "post_id": 19
+    },
+    {
+      "user_id": 9,
+      "post_id": 26
+    },
+    {
+      "user_id": 1,
+      "post_id": 4
+    },
+    {
+      "user_id": 3,
+      "post_id": 1
+    },
+    {
+      "user_id": 9,
+      "post_id": 9
+    },
+    {
+      "user_id": 4,
+      "post_id": 19
+    },
+    {
+      "user_id": 4,
+      "post_id": 22
+    },
+    {
+      "user_id": 7,
+      "post_id": 26
+    },
+    {
+      "user_id": 2,
+      "post_id": 19
+    },
+    {
+      "user_id": 2,
+      "post_id": 14
+    },
+    {
+      "user_id": 2,
+      "post_id": 21
+    },
+    {
+      "user_id": 9,
+      "post_id": 2
+    },
+    {
+      "user_id": 7,
+      "post_id": 28
+    },
+    {
+      "user_id": 10,
+      "post_id": 17
+    },
+    {
+      "user_id": 10,
+      "post_id": 18
+    },
+    {
+      "user_id": 1,
+      "post_id": 30
+    },
+    {
+      "user_id": 2,
+      "post_id": 2
+    },
+    {
+      "user_id": 5,
+      "post_id": 12
+    },
+    {
+      "user_id": 8,
+      "post_id": 21
+    },
+    {
+      "user_id": 8,
+      "post_id": 30
+    },
+    {
+      "user_id": 6,
+      "post_id": 12
+    },
+    {
+      "user_id": 6,
+      "post_id": 11
+    },
+    {
+      "user_id": 5,
+      "post_id": 19
+    },
+    {
+      "user_id": 5,
+      "post_id": 20
+    }
+  ]
+}
